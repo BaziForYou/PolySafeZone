@@ -81,6 +81,7 @@ function EnteredZone(isPointInside,Name)
 				end
 			end
 			IsPlayerCanAttackInSafeZone = nil
+			IsLoopStarted = false
 			Notify('error', 'Exit')
 		end)
 	else
