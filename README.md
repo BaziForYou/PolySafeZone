@@ -33,6 +33,7 @@ start PolySafeZone
 
 ## How To Add Zone Coords?
 - You can use [``/pzcreate poly``](https://github.com/mkafrin/PolyZone/wiki/Using-the-creation-script) and make zone and copy coords from ``polyzone_created_zones.txt``
+- Also you can use this [``website``](https://skyrossm.github.io/PolyZoneCreator/index.html) for making zones and copy the coords 
 
 
 ## Exports	
