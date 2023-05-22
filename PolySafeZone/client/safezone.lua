@@ -22,6 +22,26 @@ if UseESX then
 		job = NewJob.name
 		grade = NewJob.grade
 	end)
+elseif UseQB then
+	local QBCore = exports['qb-core']:GetCoreObject()
+
+	Citizen.CreateThread(function()
+		while true do
+			PlayerData = QBCore.Functions.GetPlayerData()
+			if PlayerData.citizenid ~= nil then
+				job = PlayerData.job.name
+				grade = PlayerData.job.grade.level
+				break
+			end
+			Wait(100)
+		end
+		print(QBCore.Debug(PlayerData.job))
+	end)
+
+	RegisterNetEvent("QBCore:Client:OnJobUpdate", function(JobInfo)
+		job = JobInfo.name
+		grade = JobInfo.grade.level
+	end)
 end
 
 local AllCreatedZones = {}

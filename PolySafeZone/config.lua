@@ -1,4 +1,5 @@
 UseESX = true
+UseQB = false -- Ignored if UseEsx = true
 
 CheckLoopTime = 1000
 
