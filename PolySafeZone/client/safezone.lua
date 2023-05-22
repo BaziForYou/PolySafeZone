@@ -3,11 +3,7 @@ local grade = 0
 
 if UseESX then
 	Citizen.CreateThread(function()
-		local ESX = nil -- dont need make this global it just for get job one time
-		while ESX == nil do
-			TriggerEvent("esx:getSharedObject", function(obj) ESX = obj end)
-			Citizen.Wait(10)
-		end
+		local ESX = exports['es_extended']:getSharedObject()
 
 		while ESX.GetPlayerData().job == nil do
 			Citizen.Wait(100)
