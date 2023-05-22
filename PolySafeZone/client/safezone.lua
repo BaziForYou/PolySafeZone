@@ -35,7 +35,6 @@ elseif UseQB then
 			end
 			Wait(100)
 		end
-		print(QBCore.Debug(PlayerData.job))
 	end)
 
 	RegisterNetEvent("QBCore:Client:OnJobUpdate", function(JobInfo)
